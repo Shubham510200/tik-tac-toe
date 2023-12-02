@@ -48,35 +48,43 @@ function checkWinner(flag)
     if(state[0]==state[3] && state[0]==state[6])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[1]==state[4] && state[1]==state[7])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[2]==state[5] && state[2]==state[8])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[0]==state[1] && state[0]==state[2])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[3]==state[4] && state[3]==state[5])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[6]==state[7] && state[6]==state[8])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[0]==state[4] && state[0]==state[8])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
+        setDisable()
     }
     else if(state[2]==state[4] && state[2]==state[6])
     {
         winner.innerHTML = flag ? "Winner X" : "Winner O";
-        }
+        setDisable()
+    }
     else
     {
         var i;
@@ -91,6 +99,18 @@ function checkWinner(flag)
         }
         if(count==0){
             winner.innerHTML="MATCH DRAW "
+        }
+    }
+}
+
+function setDisable()
+{
+    var i ;
+    for(i=0;i<9;i++)
+    {
+        if(state[i]==1 || state[i]==0)
+        {
+            state[i]=null;
         }
     }
 }
